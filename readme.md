@@ -11,7 +11,7 @@ Hva trenger du for å komme i gang?
 
 I dette kurset vil vi bruke Svelte og SvelteKit for å lage en enkel nettside.
 
-## 2. Installer Sanity CLI
+## Installer Sanity CLI
 ```bash
 npm install -g @sanity/cli
 ```
@@ -19,7 +19,11 @@ npm install -g @sanity/cli
 ## Metode 1 - Opprett Sanity prosjekt med webgrensesnitt
 Logg inn på [sanity.io](https://www.sanity.io/) og opprett et nytt prosjekt.
 
-Installer studio lokalt
+Installer studio lokalt med Sanity CLI
+
+```bash
+sanity init
+```
 
 ## Metode 2 - Opprett sanity prosjekt med CLI
 
