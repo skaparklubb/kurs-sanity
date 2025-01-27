@@ -3,7 +3,7 @@
 	import '../app.css';
 	let { children } = $props();
 
-	let name = "<dine initialer>";
+	let name = "hpe";
 </script>
 
 <Header {name} />
