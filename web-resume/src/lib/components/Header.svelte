@@ -6,6 +6,7 @@
   <a href="/" class="logo">{name}</a>
   <div class="navbar-links">
     <a href="/#about-me" class="nav-link">Om meg</a>
+    <a href="/#experience" class="nav-link">Arbeidserfaring</a>
     <a href="/#my-work" class="nav-link">Prosjekter</a>
     
   </div>

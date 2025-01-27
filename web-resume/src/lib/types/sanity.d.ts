@@ -10,6 +10,30 @@ type SanityWorkExperience = {
   endDate?: string;
 };
 
+type SanityAbout = {
+  _id: string;
+  _type: "about";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  name: string;
+  heroTitle: string;
+  heroSubTitle: string;
+  image: {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: "image";
+  };
+  description: Array<RawTextContent | RawImageContent>;
+};
+
+
 type SanityProject = {
   _id: string;
   _type: "project";

@@ -1,8 +1,15 @@
 @import 'tailwindcss';
 @import url('https://fonts.googleapis.com/css2?family=Text+Me+One&display=swap');
 
-@plugin "daisyui";
+@plugin "daisyui" {
 
+   themes: light --default, retro;
+
+ }
+
+/* 
+  to apply dark theme add the following after text in line 6: , dark --prefersdark
+*/
 
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
