@@ -4,7 +4,7 @@ type SanityWorkExperience = {
   _createdAt: string;
   _updatedAt: string;
   _rev: string;
-  jobTitle: string;
+  title: string;
   company: string;
   startDate: string;
   endDate?: string;

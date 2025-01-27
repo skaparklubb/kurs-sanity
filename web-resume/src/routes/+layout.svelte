@@ -5,6 +5,5 @@
 </script>
 
 <Header name="hpe" />
-<div class="m-4">
 	{@render children()}
-</div>
+
