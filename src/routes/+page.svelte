@@ -16,9 +16,11 @@
 
 <HeroSection />
 
-<div class="m-48">
+<div class="mx-48 mt-4">
 	<AboutSection />
 
-	<!-- <ExperienceSection {experiences} />  -->
+	<ExperienceSection  /> 
+
+	<!-- Enable the next section by removing the comment tags -->
 	<!-- <ProjectSection {projects}/> -->
 </div>

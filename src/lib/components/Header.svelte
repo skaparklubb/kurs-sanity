@@ -3,7 +3,7 @@
   </script>
 
 <nav class="navbar default-margin">
-  <a href="/" class="logo">{name}</a>
+  <a href="/" class="logo text-primary">{name}</a>
   <div class="navbar-links">
     <a href="/#about-me" class="nav-link">Om meg</a>
     <a href="/#experience" class="nav-link">Arbeidserfaring</a>
@@ -13,6 +13,12 @@
 </nav>
 
 <style>
+
+  a {
+    text-decoration: none;
+    font-family: 'Inter';
+
+  }
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -28,6 +34,9 @@
 
   .navbar-links {
     display: flex;
+    color: var(--color-secondary);
+    text-transform: uppercase ;
+    font-weight: 300;
     align-items: center;
     gap: 60px;
   }

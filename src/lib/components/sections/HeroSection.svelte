@@ -40,11 +40,16 @@
 		line-height: 0.8;
 		margin-bottom: -1 rem;
 		text-justify: right;
+		font-family: 'inter';
+
 		
 	}
 
 	.sub {
 		font-size: 8.5rem;
+		font-family: 'inter';
+		font-weight: 100;
+
 	}
 
 	.hero-container {

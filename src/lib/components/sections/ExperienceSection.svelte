@@ -2,52 +2,40 @@
 	import Experience from '../Experience.svelte';
 	import SectionHeadline from '../SectionHeadline.svelte';
 
-	interface ExpProps {
-		experiences: SanityWorkExperience[];
-	}
-	let { experiences }: ExpProps = $props();
 </script>
 
 <section>
 	<SectionHeadline sectionName={'experience'}>Arbeidserfaring</SectionHeadline>
 
 	<ul class="work-experience-list">
-		{#each experiences as experience}
-			<Experience {experience} />
-		{/each}
+			<Experience
+				title="Arbeid 3"
+				company="Bedrift 3"
+				startDate="2022-01-01"
+				
+			/>
+			<Experience
+				title="Arbeid 2"
+				company="Bedrift 2"
+				startDate="2021-01-01"
+				endDate="2022-01-01"
+			/>
+			<Experience
+				title="Arbeid 1"
+				company="Bedrift 1"
+				startDate="2020-01-01"
+				endDate="2020-01-01"
+			/>
+		
 	</ul>
 </section>
 
 <style>
-	.work-experience {
-		display: flex;
-		justify-content: space-between;
-		width: 100%;
-	}
+	
 
 	.work-experience-list {
 		width: 50%;
 	}
 
-	.headline {
-		text-align: right;
-	}
-
-	.work-item {
-		border-bottom: 1px solid #f0eded;
-		padding-bottom: 12px;
-	}
-
-	.work-item:not(:first-of-type) {
-		padding-top: 16px;
-	}
-
-	.work-item p {
-		margin-bottom: 0;
-	}
-
-	.company-and-date {
-		display: flex;
-		justify-content: space-between;
-	}
+	
 </style>
