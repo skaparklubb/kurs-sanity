@@ -100,6 +100,13 @@ interface ProcessedProject {
   slug: string;
   content: Array<ProcessedTextContent | ProcessedImageContent>;
 }
+interface ProcessedAbout {
+  name: string;
+ heroTitle: string;
+  heroSubTitle: string;
+  aboutImageUrl: string;
+  description: Array<ProcessedTextContent | ProcessedImageContent>;
+}
 
 interface ProcessedTextContent {
   type: "text";

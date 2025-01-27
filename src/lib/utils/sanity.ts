@@ -11,6 +11,22 @@ const config: ClientConfig = {
 const sanityClient = createClient(config);
 export default sanityClient;
 
+export function processAboutEntry(rawAbout: SanityAbout) {
+  const builder = imageUrlBuilder(sanityClient);
+  const aboutImageUrl = builder.image(rawAbout.image).url();
+
+  const processedAbout: ProcessedAbout = {
+    name: rawAbout.name,
+    heroTitle: rawAbout.heroTitle,
+    heroSubTitle: rawAbout.heroSubTitle,
+    aboutImageUrl,
+    description: rawAbout.description.map(processRawContent),
+  };
+
+  return processedAbout;
+
+}
+
 export function processProjectEntries(rawProject: SanityProject) {
   const builder = imageUrlBuilder(sanityClient);
   const projectImageUrl = builder.image(rawProject.image).url();
@@ -22,13 +38,13 @@ export function processProjectEntries(rawProject: SanityProject) {
     stack: rawProject.stack,
     slug: rawProject.slug,
     projectImageUrl,
-    content: rawProject.content.map(processProjectContent),
+    content: rawProject.content.map(processRawContent),
   };
 
   return processedProject;
 }
 
-function processProjectContent(content: RawTextContent | RawImageContent) {
+function processRawContent(content: RawTextContent | RawImageContent) {
   if (content._type === "block") {
     // process text content
     const processedTextContent: ProcessedTextContent = {
