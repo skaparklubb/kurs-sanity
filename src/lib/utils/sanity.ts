@@ -27,6 +27,14 @@ export function processAboutEntry(rawAbout: SanityAbout) {
 
 }
 
+export function getTagFromStyle(style: ProcessedTextContent["style"]): string {
+    if (style === "normal") {
+      return "p";
+    } else {
+      return style;
+    }
+}
+
 export function processProjectEntries(rawProject: SanityProject) {
   const builder = imageUrlBuilder(sanityClient);
   const projectImageUrl = builder.image(rawProject.image).url();
