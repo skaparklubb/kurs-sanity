@@ -4,14 +4,14 @@
 	import HeroSection from '$lib/components/sections/HeroSection.svelte';
 	import ProjectSection from '$lib/components/sections/ProjectSection.svelte';
 
-	const { data } = $props();
-	let {
-		experiences,
-		about,
-		projects,
-	} = data;
+	// const { data } = $props();
+	// let {
+	// 	experiences,
+	// 	about,
+	// 	projects,
+	// } = data;
 
-	let { name, heroTitle, heroSubTitle} = data.about;
+	// let { name, heroTitle, heroSubTitle} = data.about;
 </script>
 
 <HeroSection />
@@ -19,6 +19,6 @@
 <div class="m-48">
 	<AboutSection />
 
-	<ExperienceSection {experiences} /> 
-	<ProjectSection {projects}/>
+	<!-- <ExperienceSection {experiences} />  -->
+	<!-- <ProjectSection {projects}/> -->
 </div>

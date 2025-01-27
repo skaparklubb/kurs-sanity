@@ -2,8 +2,10 @@
 	import Header from '$lib/components/Header.svelte';
 	import '../app.css';
 	let { children } = $props();
+
+	let name = "<dine initialer>";
 </script>
 
-<Header name="hpe" />
+<Header {name} />
 	{@render children()}
 
