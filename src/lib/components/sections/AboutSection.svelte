@@ -1,26 +1,28 @@
 <script lang="ts">
 	import SectionHeadline from '../SectionHeadline.svelte';
-	import image from '$assets/person.jpg';
-	// let { about } = $props();
+	import { getTagFromStyle } from '$lib/utils/sanity';
+
+	interface Props {
+		about: ProcessedAbout;
+	}
+	let { about }: Props = $props();
+
 </script>
 
 <section class="about-me mt-l">
 	<SectionHeadline sectionName={'about-me'}>Om Meg</SectionHeadline>
 	<div class="mt-m content-container default-margin">
-		<img class="image" src={image} alt="" />
+		<img class="image" src={about.aboutImageUrl} alt="" />
 		<div class="text">
-			<p>
-				Hei, jeg er <span>&lt;Ditt navn&gt;</span>, Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-			</p>
-			<p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe sequi voluptatibus architecto reprehenderit 
-                quidem sint a, perferendis, 
-                velit commodi quod consectetur nihil deleniti neque incidunt aperiam, rem ex fugiat laborum!
-				
-			</p>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam omnis soluta ad vel, tempora, in quos officiis blanditiis perferendis ipsa odit dolorem numquam officia ullam laudantium est similique! Fugit, ipsam!
-			</p>
+			{#each about.description as block}
+        {#if block.type === "text"}
+          <svelte:element this={getTagFromStyle(block.style)}
+            >{block.textToRender}</svelte:element
+          >
+        {:else}
+          <img class="content-image" src={block.url} alt="" />
+        {/if}
+      {/each}
 		</div>
 	</div>
 </section>

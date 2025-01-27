@@ -1,18 +1,12 @@
 <script lang="ts">
+	import { getTagFromStyle } from '$lib/utils/sanity.js';
+
   let { data } = $props();
 
   const { company, name, dateAccomplished, stack, projectImageUrl, content } =
     data.project;
 
-  function getTagFromStyle(style: ProcessedTextContent["style"]): string {
-    if (style === "normal") {
-      return "p";
-    } else {
-      return style;
-    }
-  }
 
-  $inspect(data);
 </script>
 
 <main class="m-48 work-page">
