@@ -20,8 +20,16 @@ export const project = defineType({
     defineField({
       name: 'slug',
       title: 'Slug - Ending of url to see the project work',
-      type: 'string',
-      validation: (rule) => rule.required(),
+      description: 'This will be used to generate the URL for this project. It should be unique and descriptive.',
+      type: 'slug',
+      options: {
+        source: 'name',
+        maxLength: 200, // will be ignored if slugify is set
+        slugify: input => input
+          .toLowerCase()
+          .replace(/\s+/g, '-')
+          .slice(0, 200)
+      }
     }),
     defineField({
       name: 'image',
