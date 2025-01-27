@@ -1,7 +1,8 @@
 @import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Text+Me+One&display=swap');
+
 @plugin "daisyui";
-@import url('https://fonts.googleapis.com/css2?family=Text+Me+One&display=swap')
-layer(utilities);
+
 
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
