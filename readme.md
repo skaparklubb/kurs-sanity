@@ -50,6 +50,18 @@ sanity openW
 sanity deploy
 ```
 
+## Nyttige kommandoer for Sanity CLI
+
+```bash
+# få hjelp til CLI
+sanity -h
+
+
+# generer typescript definisjoner
+
+```
+
+
 ## Nyttige lenker
 - [Sanity.io dokumentasjon](https://www.sanity.io/docs)
 - [Sanity.io kurs](https://www.sanity.io/courses)
