@@ -7,65 +7,96 @@ Hvis du ikke har noen bruker fra før så kan du gjøre det her på [sanity.io](
 Hva trenger du for å komme i gang?
 
 - Node.js
-- Sanity CLI
+- Git (hvis du vil bruke kode fra GitHub repo)
 
-I dette kurset vil vi bruke Svelte og SvelteKit for å lage en enkel nettside.
+I dette kurset vil vi bruke [SvelteKit](https://svelte.dev) for å lage en enkel nettside.
 
-## Installer Sanity CLI
+## Klon Web- prosjektet fra GitHub
+
+Hvis du ikke har gjort det, klon prosjektet fra GitHub.
+
 ```bash
-npm install -g @sanity/cli
+git clone https://github.com/skaparklubb/kurs-sanity.git
 ```
 
-## Metode 1 - Opprett Sanity prosjekt med webgrensesnitt
+Når du har klonet prosjektet kan du starte utviklingsserveren.
+
+```bash
+
+# Gå til prosjektmappen
+cd kurs-sanity
+
+# bruk start branch
+git checkout start
+
+# Installer avhengigheter
+npm install
+
+# Start utviklingsserver
+npm run dev
+
+```
+
+Hvis du ønsker å sjekke ut løsningen kan du bytte til branch `almost/complete`
+```bash
+git checkout almost/complete
+
+# Hvis du ikke har installert avhengigheter
+npm install
+
+# Start utviklingsserver
+npm run dev
+
+```
+
+## Start fra bunnen av med SvelteKit
+
+```bash
+
+# Opprett et nytt SvelteKit prosjekt
+# bytt ut my-app med ønsket navn
+# Svar på spørsmålene som kommer
+npx sv create my-app
+
+cd my-app
+
+npm install
+
+npm run dev
+```
+
+### Spar tid 
+
+Kopier mappen `src/lib/utils`eller filene i denne mappen og `src/lib/types/sanity.d.ts`  fra dette prosjektet til ditt nye prosjekt.
+
+## Opprett Sanity- prosjekt med webgrensesnitt
 Logg inn på [sanity.io](https://www.sanity.io/) og opprett et nytt prosjekt.
 
-Installer studio lokalt med Sanity CLI
+På https://www.sanity.io/manage/personal/project/<din-prosjekt-id>/getting-started kan du finne en kommando for å komme i gang med Sanity Studio.
 
 ```bash
-sanity init
+npm create sanity@latest -- --project <din-prosjekt-id> --dataset production --template clean --typescript --output-path <mappe-for-sanity-studio>
 ```
 
-## Metode 2 - Opprett sanity prosjekt med CLI
-
-Opprett et nytt Sanity prosjekt
+Hvis prosjekt-id er `abc123` og du vil ha Sanity Studio i en mappe som heter `studio` så vil kommandoen se slik ut:
 
 ```bash
-sanity init
-```
+npm create sanity@latest -- --project abc123 --dataset production --template clean --typescript --output-path studio
+``` 
 
-## 4. Start lokal utviklingsserver
-```bash
-sanity start
-```
-
-## 5. Åpne Sanity Studio
-
+kjør deretter
 
 ```bash
-sanity openW
+cd studio
+npm install
+npm run dev
 ```
-
-## 6. Deploy Sanity Studio
-```bash
-sanity deploy
-```
-
-## Nyttige kommandoer for Sanity CLI
-
-```bash
-# få hjelp til CLI
-sanity -h
-
-
-# generer typescript definisjoner
-
-```
-
 
 ## Nyttige lenker
 - [Sanity.io dokumentasjon](https://www.sanity.io/docs)
+- [Sanity Schema typer](https://www.sanity.io/docs/schema-types)
+- [GROQ](https://www.sanity.io/docs/query-cheat-sheet)
 - [Sanity.io kurs](https://www.sanity.io/courses)
-- [Sanity.io community](https://slack.sanity.io/)
 
 
 ## Hvis du ikke har NodeJS
